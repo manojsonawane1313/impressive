@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressive Walls</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="home"> 
+    
+    <header>
+        <h1>IMPRESSIVE WALL PUTTY</h1>
+        <p>Explore our range of wall putty.</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#contact" onclick="toggleContact()">Contact</a>
+
+        <!-- searchbar -->
+        <section class="search-bar">
+            <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search for products...">
+        </section>
+    </nav>
+
+    <!-- all product list -->
+    <section class="products-grid" id="products">
+        <div id="productDetailsOverlay" class="product-details-overlay">
+            <div class="product">
+            <a href="product-1.html"><img src="p-1.jpg" alt="p-1"></a>
+            <h3>White Cement-Based Putty</h3>
+            <p>Made from white cement mixed with fillers and additives.</p>
+            <p class="price">Rs.00</p>
+        </div>
+            </div>
+
+        <div class="product">
+            <a href="product-2.html"><img src="p-2.jpg" alt="p-2"></a>
+            <h3>Acrylic Putty</h3>
+            <p>Composed of acrylic resins and other additives.</p>
+            <p class="price">Rs.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product-3.html"><img src="p-3.jpg" alt="p-3"></a>
+            <h3>Polyester Putty</h3>
+            <p>Made from polyester resins and fillers.</p>
+            <p class="price">Rs.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product-4.html"><img src="p-4.jpg" alt="p-4"></a>
+            <h3>Joint Compound (or Drywall Mud)</h3>
+            <p>A mixture of gypsum powder and water.</p>
+            <p class="price">Rs.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product-5.html"><img src="p-5.jpg" alt="p-5"></a>
+            <h3>Ready-Mix Putty</h3>
+            <p>Pre-mixed putty that’s ready to use out of the container.</p>
+            <p class="price">Rs.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product-6.html"><img src="p-6.jpg" alt="p-6"></a>
+            <h3>Elastic Putty</h3>
+            <p>Contains elastomers that provide flexibility.</p>
+            <p class="price">Rs.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product-7.html"><img src="p-7.jpg" alt="p-7"></a>
+            <h3>Epoxy Putty</h3>
+            <p>Made from epoxy resins and hardeners.</p>
+            <p class="price">Rs.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product-8.html"><img src="p-8.jpg" alt="p-8"></a>
+            <h3>Waterproof Putty</h3>
+            <p>A type of wall putty that provides excellent water resistance.</p>
+            <p class="price">Rs.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product-9.html"><img src="p-9.jpg" alt="p-9"></a>
+            <h3>Foam Putty</h3>
+            <p>Foam wall putty is a less common type of putty that is lightweight and provides thermal insulation and soundproofing properties.</p>
+            <p class="price">Rs.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product-10.html"><img src="p-10.jpg" alt="p-10"></a>
+            <h3>Oil-Based Putty</h3>
+            <p>A ready oil-based putty used to provide a smooth finish for plaster, brick, stone, wood, etc., mostly used before painting or other finishes.</p>
+            <p class="price">Rs.00</p>
+        </div>
+    </section>
+
+    <!-- contact details must be in last bottom -->
+    <section id="contact" class="contact" style="display: none;">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need more information, feel free to reach out to us!</p>
+        <div class="contact-details">
+            <p><strong>Email:</strong> impressive666@gmail.com</p>
+            <p><strong>Phone:</strong> 7066666037</p>
+            <p><strong>Address:</strong> 123 Furniture Street, Nashik XYZ</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Furniture Company. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
