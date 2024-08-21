@@ -1,319 +1,153 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-/* contanct css */
-.contact {
-    background-color: #fff;
-    padding: 40px;
-    text-align: center;
-    border-top: 1px solid #ddd;
-    margin-top: 20px;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressive Walls</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-.contact h2 {
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.contact-details p {
-    color: #555;
-    font-size: 16px;
-    margin: 5px 0;
-}
-
-.contact-details strong {
-    color: #333;
-}
+<body id="home">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-header {
-    background-color: #69afd7;
-    color: white;
-    padding: 15px ;
-    text-align: center;
-}
+    <header>
+        <h1>IMPRESSIVE WALL PUTTY</h1>
+        <p>Explore our range of wall putty.</p>
+    </header>
 
-nav {
-    position: sticky;
-    top: 0;
-    background-color: #333;
-    z-index: 1000;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-    /* added */
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: top 0.3s; /* Smooth transition for hiding/showing */
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#contact" onclick="toggleContact()">Contact</a>
+        <a href="#about" onclick="toggleAbout()">About Us</a>
 
 
-}
+       <!-- Search bar container -->
+       <div class="search-bar-container">
+        <button id="searchIcon" class="search-bar" onclick="toggleSearchBar()">
+            <img src="search-icon.png" alt="Search" />
+        </button>
+        <div id="searchContainer" class="search-container">
+            <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search for products..." />
+        </div>
+    </div>
+    
+      
+
+    </nav>
+
+    <!-- all product list -->
+    <section class="products-grid" id="products">
+        <div id="productDetailsOverlay" class="product-details-overlay">
+            <div class="product">
+                <a href="product-1.html"><img src="p-1.jpg" alt="p-1"></a>
+                <h3>White Cement-Based Putty</h3>
+                <p>Made from white cement mixed with fillers and additives.</p>
+                <p class="price">Rs.00</p>
+            </div>
+        </div>
+
+        <div class="product">
+            <a href="product-2.html"><img src="p-2.jpg" alt="p-2"></a>
+            <h3>Acrylic Putty</h3>
+            <p>Composed of acrylic resins and other additives.</p>
+            <p class="price">Rs.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product-3.html"><img src="p-3.jpg" alt="p-3"></a>
+            <h3>Polyester Putty</h3>
+            <p>Made from polyester resins and fillers.</p>
+            <p class="price">Rs.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product-4.html"><img src="p-4.jpg" alt="p-4"></a>
+            <h3>Joint Compound (or Drywall Mud)</h3>
+            <p>A mixture of gypsum powder and water.</p>
+            <p class="price">Rs.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product-5.html"><img src="p-5.jpg" alt="p-5"></a>
+            <h3>Ready-Mix Putty</h3>
+            <p>Pre-mixed putty that’s ready to use out of the container.</p>
+            <p class="price">Rs.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product-6.html"><img src="p-6.jpg" alt="p-6"></a>
+            <h3>Elastic Putty</h3>
+            <p>Contains elastomers that provide flexibility.</p>
+            <p class="price">Rs.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product-7.html"><img src="p-7.jpg" alt="p-7"></a>
+            <h3>Epoxy Putty</h3>
+            <p>Made from epoxy resins and hardeners.</p>
+            <p class="price">Rs.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product-8.html"><img src="p-8.jpg" alt="p-8"></a>
+            <h3>Waterproof Putty</h3>
+            <p>A type of wall putty that provides excellent water resistance.</p>
+            <p class="price">Rs.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product-9.html"><img src="p-9.jpg" alt="p-9"></a>
+            <h3>Foam Putty</h3>
+            <p>lightweight and provides thermal insulation and soundproofing properties.</p>
+            <p class="price">Rs.00</p>
+        </div>
+
+        <div class="product">
+            <a href="product-10.html"><img src="p-10.jpg" alt="p-10"></a>
+            <h3>Oil-Based Putty</h3>
+            <p>smooth finish for plaster, brick, stone, wood, etc., mostly
+                used before painting or other finishes.</p>
+            <p class="price">Rs.00</p>
+        </div>
+    </section>
+
+    <!-- contact details must be in last bottom -->
+    <section id="contact" class="contact" style="display: none;">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need more information, feel free to reach out to us!</p>
+        <div class="contact-details">
+            <p><strong>Email:</strong> impressive666@gmail.com</p>
+            <p><strong>Phone:</strong> 7066666037</p>
+            <p><strong>Address:</strong> 123 Furniture Street, Nashik XYZ</p>
+        </div>
+    </section>
+
+    <section id="about" class="contact" style="display: none;">
+        <h2>About Us</h2>
+        <p> Impressive Wall Putty Cement, based in Dhule, Maharashtra, stands out as a premier wall putty manufacturer
+            known
+            for its superior quality and innovative solutions. The company specializes in producing high-performance
+            putty
+            that enhances the durability and smoothness of walls, ensuring a flawless finish. </p>
+        <p> Their state-of-the-art manufacturing processes and stringent quality control measures guarantee a product
+            that
+            excels in both application and longevity. Impressive Wall Putty Cement has earned a reputation for
+            excellence in
+            the construction industry, providing builders and homeowners with a reliable solution for achieving pristine
+            and
+            long-lasting wall surfaces.</p>
 
 
-nav a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 20px 20px;
-    text-decoration: none;
-}
+    </section>
 
-/* Add a class for the scrolled state */
-nav.scrolled {
-    background-color:#ffffff ; /* Slightly transparent background */
-}
+    <footer>
+        <p>&copy; we are working on this website by manoj.</p>
+    </footer>
 
+    <script src="script.js"></script>
+</body>
 
-
-nav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* for mobile  */
-@media (max-width: 768px) {
-    nav a {
-        padding: 15px 10px;
-    }
-
-    .product {
-        padding: 15px;
-    }
-
-    .contact, #about {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    nav a {
-        padding: 10px 5px;
-        font-size: 14px;
-    }
-
-    .product {
-        padding: 10px;
-    }
-
-    .product h3 {
-        font-size: 16px;
-    }
-
-    .product .price {
-        font-size: 16px;
-    }
-
-    .contact, #about {
-        padding: 15px;
-    }
-}
-
-
-
-
-
-
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-.dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 20px;
-    background-color: inherit;
-    margin: 0;
-    cursor: pointer;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #ddd;
-    color: black;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Initially hide the search container */
-.search-container {
-    display: none; /* Hidden by default */
-    align-items: center;
-    width: 80%;
-    transition: width 0.3s ease, opacity 0.3s ease;
-    padding: 15px;
-}
-
-/* Show the search container when active */
-.search-container.active {
-    display: flex; /* Show the search container */
-    width: 100%;
-}
-
-/* Rest of the CSS remains the same */
-
-/* Style the search input */
-#searchInput {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 24px;
-    width: 250px; /* Default width for larger screens */
-    font-size: 16px;
-    outline: none;
-    transition: width 0.3s ease;
-}
-
-/* Style the search icon button */
-#searchIcon {
-    background-color: #ccc; /* Change to match your design */
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    padding: 10px;
-    margin-left: 5px;
-}
-
-#searchIcon img {
-    width: 24px; /* Adjust size as needed */
-    height: 24px;
-}
-
-/* Expand input on focus */
-#searchInput:focus {
-    width: 300px; /* Expand width on focus */
-    border-color: #aaa;
-}
-
-/* Responsive styles for mobile devices */
-@media (max-width: 768px) {
-    .search-bar-container {
-        justify-content: space-between; /* Space between input and icon on smaller screens */
-        width: 100%;
-    }
-
-    #searchInput {
-        width: 70%; /* Adjust width for smaller screens */
-    }
-
-    #searchIcon {
-        margin-left: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    #searchInput {
-        width: 60%; /* Adjust width further for very small screens */
-    }
-
-    #searchIcon {
-        padding: 8px;
-        margin-left: 8px;
-    }
-
-    #searchIcon img {
-        width: 20px; /* Smaller icon size for very small screens */
-        height: 20px;
-    }
-}
-
-/* Hide the search icon when the search container is active */
-.search-bar.active #searchIcon {
-    display: none; /* Hide icon when the search bar is active */
-}
-
-
-.products-grid {
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-    gap: 10px;
-    padding: 5px;
-    /* background-color: #62c0f3; */
-}
-
-.product {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.product img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 15px;
-}
-
-.product h3 {
-    color: #333;
-    margin: 15px 0 10px;
-}
-
-.product p {
-    color: #555;
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-.product .price {
-    font-size: 18px;
-    color: #be2514;
-    margin: 15px 0;
-    font-weight: bold;
-}
-
-button {
-    background-color: #333;
-    color: white;
-    padding: 10px 15px;
-    margin: 5px 0;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #555;
-}
-
-footer{
-    text-align: center;
-}
+</html>
