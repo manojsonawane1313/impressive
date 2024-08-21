@@ -67,20 +67,37 @@ document.addEventListener('click', function(event) {
 
 // JavaScript to handle navigation visibility on scroll
 let lastScrollTop = 0;
-const nav = document.querySelector('nav');
+const searchBarContainer = document.querySelector('.search-bar-container');
+const searchIcon = document.getElementById('searchIcon');
+const searchContainer = document.getElementById('searchContainer');
 
 window.addEventListener('scroll', () => {
     const currentScrollTop = window.scrollY;
-    
-    if (currentScrollTop > lastScrollTop) {
-        // Scrolling down
-        nav.style.top = "-60px"; // Adjust based on the height of your nav
-        nav.classList.add('scrolled');
-    } else {
-        // Scrolling up
-        nav.style.top = "0";
-        nav.classList.remove('scrolled');
+
+    // Close the search bar if scrolling occurs and the search bar is active
+    if (searchContainer.classList.contains('active')) {
+        searchContainer.classList.remove('active');
+        searchIcon.style.display = 'block'; // Show the search icon again
     }
-    
-    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+
+    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+});
+
+function toggleSearchBar() {
+    if (searchContainer.classList.contains('active')) {
+        searchContainer.classList.remove('active');
+        searchIcon.style.display = 'block'; // Ensure search icon is visible
+    } else {
+        searchContainer.classList.add('active');
+        searchIcon.style.display = 'none'; // Hide search icon when input is active
+        document.getElementById('searchInput').focus(); // Focus on the input field
+    }
+}
+
+document.addEventListener('click', function(event) {
+    // Close the search bar if clicked outside the container
+    if (!searchBarContainer.contains(event.target) && !searchIcon.contains(event.target)) {
+        searchContainer.classList.remove('active');
+        searchIcon.style.display = 'block'; // Ensure search icon is visible
+    }
 });
