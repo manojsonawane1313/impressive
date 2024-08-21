@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body id="home"> 
-    
+<body id="home">
+
     <header>
         <h1>IMPRESSIVE WALL PUTTY</h1>
         <p>Explore our range of wall putty.</p>
@@ -18,25 +18,32 @@
     <nav>
         <a href="#home">Home</a>
         <a href="#products">Products</a>
-        <a href="#about">About Us</a>
         <a href="#contact" onclick="toggleContact()">Contact</a>
+        <a href="#about" onclick="toggleAbout()">About Us</a>
 
-        <!-- searchbar -->
+
+        <!-- Search bar with icon -->
         <section class="search-bar">
-            <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search for products...">
+            <button id="searchIcon" onclick="toggleSearchBar()">
+                <img src="search-icon.png" alt="Search" />
+            </button>
+            <div id="searchContainer" class="search-container">
+                <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search for products..." />
+            </div>
         </section>
+
     </nav>
 
     <!-- all product list -->
     <section class="products-grid" id="products">
         <div id="productDetailsOverlay" class="product-details-overlay">
             <div class="product">
-            <a href="product-1.html"><img src="p-1.jpg" alt="p-1"></a>
-            <h3>White Cement-Based Putty</h3>
-            <p>Made from white cement mixed with fillers and additives.</p>
-            <p class="price">Rs.00</p>
-        </div>
+                <a href="product-1.html"><img src="p-1.jpg" alt="p-1"></a>
+                <h3>White Cement-Based Putty</h3>
+                <p>Made from white cement mixed with fillers and additives.</p>
+                <p class="price">Rs.00</p>
             </div>
+        </div>
 
         <div class="product">
             <a href="product-2.html"><img src="p-2.jpg" alt="p-2"></a>
@@ -90,14 +97,15 @@
         <div class="product">
             <a href="product-9.html"><img src="p-9.jpg" alt="p-9"></a>
             <h3>Foam Putty</h3>
-            <p>Foam wall putty is a less common type of putty that is lightweight and provides thermal insulation and soundproofing properties.</p>
+            <p>lightweight and provides thermal insulation and soundproofing properties.</p>
             <p class="price">Rs.00</p>
         </div>
 
         <div class="product">
             <a href="product-10.html"><img src="p-10.jpg" alt="p-10"></a>
             <h3>Oil-Based Putty</h3>
-            <p>A ready oil-based putty used to provide a smooth finish for plaster, brick, stone, wood, etc., mostly used before painting or other finishes.</p>
+            <p>smooth finish for plaster, brick, stone, wood, etc., mostly
+                used before painting or other finishes.</p>
             <p class="price">Rs.00</p>
         </div>
     </section>
@@ -113,8 +121,26 @@
         </div>
     </section>
 
+    <section id="about" class="contact" style="display: none;">
+        <h2>About Us</h2>
+        <p> Impressive Wall Putty Cement, based in Dhule, Maharashtra, stands out as a premier wall putty manufacturer
+            known
+            for its superior quality and innovative solutions. The company specializes in producing high-performance
+            putty
+            that enhances the durability and smoothness of walls, ensuring a flawless finish. </p>
+        <p> Their state-of-the-art manufacturing processes and stringent quality control measures guarantee a product
+            that
+            excels in both application and longevity. Impressive Wall Putty Cement has earned a reputation for
+            excellence in
+            the construction industry, providing builders and homeowners with a reliable solution for achieving pristine
+            and
+            long-lasting wall surfaces.</p>
+
+
+    </section>
+
     <footer>
-        <p>&copy; 2024 Your Furniture Company. All rights reserved.</p>
+        <p>&copy; we are working on this website by manoj.</p>
     </footer>
 
     <script src="script.js"></script>
