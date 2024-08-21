@@ -36,10 +36,10 @@ header {
     padding: 15px ;
     text-align: center;
 }
-
+ 
 nav {
     position: sticky;
-    top: 0;
+    top: -60px;
     background-color: #333;
     z-index: 1000;
     overflow: hidden;
@@ -64,9 +64,6 @@ nav a {
 }
 
 /* Add a class for the scrolled state */
-nav.scrolled {
-    background-color:#ffffff ; /* Slightly transparent background */
-}
 
 
 
@@ -180,7 +177,7 @@ nav a:hover {
     width: 100%;
 }
 
-/* Rest of the CSS remains the same */
+
 
 /* Style the search input */
 #searchInput {
@@ -252,6 +249,8 @@ nav a:hover {
 }
 
 
+
+
 .products-grid {
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
@@ -317,3 +316,4 @@ button:hover {
 footer{
     text-align: center;
 }
+
