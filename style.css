@@ -192,6 +192,7 @@ nav a:hover {
 
 /* Style the search icon button */
 #searchIcon {
+    float:right;
     background-color: #ccc; /* Change to match your design */
     border: none;
     border-radius: 50%;
