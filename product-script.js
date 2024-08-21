@@ -25,4 +25,22 @@ document.addEventListener("DOMContentLoaded", function() {
 function toggleContact() {
     const contactSection = document.querySelector('.contact');
     contactSection.style.display = contactSection.style.display === 'none' ? 'block' : 'none';
-}
+} 
+
+// JavaScript to handle navigation visibility on scroll
+let lastScrollTop = 0;
+const nav = document.querySelector('nav');
+
+window.addEventListener('scroll', () => {
+    const currentScrollTop = window.scrollY;
+    
+    if (currentScrollTop > lastScrollTop) {
+        // Scrolling down
+        nav.style.top = "-60px"; // Adjust based on the height of your nav
+    } else {
+        // Scrolling up
+        nav.style.top = "0";
+    }
+    
+    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+});
