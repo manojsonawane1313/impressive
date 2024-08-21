@@ -165,49 +165,13 @@ nav a:hover {
     display: block;
 }
 
-/* Initial styles for the search bar container */
-.search-bar {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 50px;
-    margin: 10px;
-}
-
 /* Initially hide the search container */
 .search-container {
     display: none; /* Hidden by default */
     align-items: center;
     width: 80%;
     transition: width 0.3s ease, opacity 0.3s ease;
-}
-
-/* Hide the search icon when the search container is active */
-.search-bar.active #searchIcon {
-    display: none; /* Hide icon when the search bar is active */
-}
-
-#searchInput {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 100%;
-}
-
-#searchIcon {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    margin-left: 10px;
-}
-
-#searchIcon img {
-    width: 34px;
-    height: 34px;
+    padding: 15px;
 }
 
 /* Show the search container when active */
@@ -216,16 +180,75 @@ nav a:hover {
     width: 100%;
 }
 
+/* Rest of the CSS remains the same */
+
+/* Style the search input */
+#searchInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 24px;
+    width: 250px; /* Default width for larger screens */
+    font-size: 16px;
+    outline: none;
+    transition: width 0.3s ease;
+}
+
+/* Style the search icon button */
+#searchIcon {
+    background-color: #ccc; /* Change to match your design */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+#searchIcon img {
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+}
+
+/* Expand input on focus */
+#searchInput:focus {
+    width: 300px; /* Expand width on focus */
+    border-color: #aaa;
+}
+
+/* Responsive styles for mobile devices */
 @media (max-width: 768px) {
-    .search-container {
-        width: 90%;
+    .search-bar-container {
+        justify-content: space-between; /* Space between input and icon on smaller screens */
+        width: 100%;
+    }
+
+    #searchInput {
+        width: 70%; /* Adjust width for smaller screens */
+    }
+
+    #searchIcon {
+        margin-left: 10px;
     }
 }
 
 @media (max-width: 480px) {
-    .search-container {
-        width: 95%;
+    #searchInput {
+        width: 60%; /* Adjust width further for very small screens */
     }
+
+    #searchIcon {
+        padding: 8px;
+        margin-left: 8px;
+    }
+
+    #searchIcon img {
+        width: 20px; /* Smaller icon size for very small screens */
+        height: 20px;
+    }
+}
+
+/* Hide the search icon when the search container is active */
+.search-bar.active #searchIcon {
+    display: none; /* Hide icon when the search bar is active */
 }
 
 
