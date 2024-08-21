@@ -75,6 +75,49 @@ nav a:hover {
     color: black;
 }
 
+/* for mobile  */
+@media (max-width: 768px) {
+    nav a {
+        padding: 15px 10px;
+    }
+
+    .product {
+        padding: 15px;
+    }
+
+    .contact, #about {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        padding: 10px 5px;
+        font-size: 14px;
+    }
+
+    .product {
+        padding: 10px;
+    }
+
+    .product h3 {
+        font-size: 16px;
+    }
+
+    .product .price {
+        font-size: 16px;
+    }
+
+    .contact, #about {
+        padding: 15px;
+    }
+}
+
+
+
+
+
+
 .dropdown {
     float: left;
     overflow: hidden;
