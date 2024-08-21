@@ -24,15 +24,17 @@
         <a href="#about" onclick="toggleAbout()">About Us</a>
 
 
-        <!-- Search bar with icon -->
-        <section class="search-bar">
-            <button id="searchIcon" onclick="toggleSearchBar()">
-                <img src="search-icon.png" alt="Search" />
-            </button>
-            <div id="searchContainer" class="search-container">
-                <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search for products..." />
-            </div>
-        </section>
+       <!-- Search bar container -->
+       <div class="search-bar-container">
+        <button id="searchIcon" class="search-bar" onclick="toggleSearchBar()">
+            <img src="search-icon.png" alt="Search" />
+        </button>
+        <div id="searchContainer" class="search-container">
+            <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search for products..." />
+        </div>
+    </div>
+    
+      
 
     </nav>
 
