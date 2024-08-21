@@ -8,49 +8,46 @@
 /* General Body Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
     color: #333;
-    line-height: 1.6;
-    padding: 20px;
+    line-height: 1.6; 
 }
 
 nav {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     background-color: #333;
     z-index: 1000;
     overflow: hidden;
     font-family: Arial, sans-serif;
+    transition: top 0.3s; /* Smooth transition for hiding/showing */
 }
-
 
 nav a {
     float: left;
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 20px;
+    padding: 10px 20px;
     text-decoration: none;
 }
+
+/* Add this if the navigation height is not accounted for */
+body {
+    padding-top: 50px; /* Adjust based on the height of your nav */
+}
+
 
 /* Product Section Styling */
 .product-detail {
     background-color: white;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding-bottom: 80px; /* Adjust this based on button height */
 }
-
-.product-detail img {
-    width: 600px;
-    height: 400px;
-    border-radius: 10px;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
 .product-info {
     margin: 0 auto;
     max-width: 800px;
@@ -133,7 +130,17 @@ footer {
     font-size: 14px;
 }
 
-/* Responsive Styling */
+.product-detail img {
+    width: 100%; /* Image takes up 100% of its container's width */
+    max-width: 300px; /* Maximum width the image can grow to */
+    height: auto; /* Automatically adjust the height to maintain the aspect ratio */
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    padding:8px ;
+}
+
+
 @media (max-width: 768px) {
     .product-detail img {
         width: 100%;
@@ -143,6 +150,8 @@ footer {
     .product-info {
         padding: 0 10px;
     }
+
+
 
     .buy-now, .add-to-cart {
         width: 100%;
@@ -163,27 +172,47 @@ footer {
     z-index: 1000; /* Ensures the buttons are on top of other content */
 }
 
-/* Button Styling */
+/* Container for Sticky Buttons */
+.sticky-buttons-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000; /* Ensures the buttons are on top of other content */
+    display: flex; /* Align buttons in a single line */
+    justify-content: center; /* Center align buttons */
+    gap: 10px; /* Space between buttons */
+}
+
+
+/* Button Styling in Sticky Buttons Container */
 .sticky-buttons-container .buy-now,
 .sticky-buttons-container .add-to-cart {
     display: inline-block;
-    background-color: #4CAF50;
-    color: white;
     padding: 15px 30px;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     text-transform: uppercase;
-    margin: 5px 10px;
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 .sticky-buttons-container .buy-now {
     background-color: #c23816;
+    color: white;
 }
 
 .sticky-buttons-container .buy-now:hover {
     background-color: #a12d10;
+}
+
+.sticky-buttons-container .add-to-cart {
+    background-color: #4CAF50;
+    color: white;
 }
 
 .sticky-buttons-container .add-to-cart:hover {
